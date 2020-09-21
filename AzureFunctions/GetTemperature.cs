@@ -28,34 +28,34 @@ namespace AzureFunctions
 
             }));
 
-            return new OkObjectResult(await Task.Run(() => {
-                return JsonConvert.SerializeObject(new TemperatureModel()
-                {
-                    Temperature = rnd.Next(20, 30),
-                    Humidity = rnd.Next(30, 40),
-                    Timestamp = DateTime.Now
-                });
+            //return new OkObjectResult(await Task.Run(() =>
+            //{
+            //    return JsonConvert.SerializeObject(new TemperatureModel()
+            //    {
+            //        Temperature = rnd.Next(20, 30),
+            //        Humidity = rnd.Next(30, 40),
+            //        Timestamp = DateTime.Now
+            //    });
+            //}));
 
 
 
 
+            //var result = await Task.Run(() =>
+            //{
+            //    var data = new TemperatureModel()
+            //    {
+            //        Temperature = rnd.Next(20, 30),
+            //        Humidity = rnd.Next(30, 40)
+            //    };
+
+            //    var json = JsonConvert.SerializeObject(data);
+
+            //    return json;
+            //});
 
 
-                var result = await Task.Run(() =>
-            {
-                var data = new TemperatureModel()
-                {
-                    Temperature = rnd.Next(20, 30),
-                    Humidity = rnd.Next(30, 40)
-                };
-
-                var json = JsonConvert.SerializeObject(data);
-
-                return json;
-            });
-
-
-            return new OkObjectResult(result);
+            //return new OkObjectResult(result);
         }
     }
 }
